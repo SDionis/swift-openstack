@@ -180,6 +180,9 @@ module Openstack
 
       # Uploads a given object to a given container
       def upload_segment(url, token, container, file_path, options={})
+        puts "================================================================="
+        puts "================================================================="
+        puts "================================================================="
         options[:object_name] ||= file_path.match(/.+\/(.+?)$/)[1]
         file = File.open(file_path, "rb")
 
